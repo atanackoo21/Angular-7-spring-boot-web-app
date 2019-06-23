@@ -1,0 +1,45 @@
+<!-- novo -->
+
+<mat-toolbar color="primary">
+    <span class="title-center">Dobavljač</span>
+</mat-toolbar>
+<div>
+  <mat-card style="min-height: 30px; margin-bottom: -35pt;" class="example-card" >
+      <mat-card-content style = "margin-left: 30pt;">
+          <span>ID</span>
+          <span>Adresa</span>
+          <span>Naziv</span>
+          <span>Kontakt</span>
+          <button mat-icon-button color="primary" (click)="openDialog(1, null, null, null, null)">
+              <mat-icon>add</mat-icon>
+          </button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ul >
+  <div cdkDropList class="example-list list" (cdkDropListDropped)="drop($event)" >
+    <ng-container *ngFor="let row of dobavljaci">
+
+          <mat-card style="min-height: 30px;" class="example-card" cdkDrag>
+            <mat-card-content >
+                <span>{{row.id}}</span>
+                <span>{{row.adresa}}</span>
+                <span>{{row.naziv}}</span>
+                <span>{{row.kontakt}}</span>
+                <span>
+                    <button mat-icon-button color="primary" (click)="openDialog(2, row.id, row.adresa, row.naziv, row.kontakt)">
+                        <mat-icon aria-label="Edit">edit</mat-icon>
+                    </button>
+                    <button mat-icon-button color="primary" (click)="openDialog(3, row.id, row.adresa, row.naziv, row.kontakt)">
+                        <mat-icon aria-label="Delete">delete</mat-icon>
+                    </button>
+                </span>
+            </mat-card-content>
+
+          </mat-card>
+
+      </ng-container>
+    </div>
+</ul>
+

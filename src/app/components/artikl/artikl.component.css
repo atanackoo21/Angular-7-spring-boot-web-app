@@ -1,0 +1,90 @@
+mat-card-content{
+    font-weight: normal;
+
+}
+
+.example-card{
+    min-height: 30px;
+    width: 100%;
+    padding-left: 1%;
+}
+
+.list-item{
+    transition: 1s;
+    transform-style: preserve-3d;
+    transform: rotateY(10deg);
+}
+
+.lightSpeedIn {
+    animation-duration: 1.3s;
+    animation-delay: 0.5s;
+
+  }
+
+ul {
+    width: 100%;
+    color:black;
+    list-style: none;
+    margin: 5% auto;
+    padding: 0;
+}
+.example-list span, .example-card span {
+    width: 25%;
+    display: inline-block;
+    float: left;
+}
+
+.list li {
+    padding: 5px;
+    width: auto;
+    background: whitesmoke;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 32px;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    flex-grow: 1;
+    margin-top: 8px;
+}
+
+.no-result {
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+    font-size: 14px;
+    font-style:  italic;
+}
+
+.mat-cell:nth-child(1),
+.mat-header-cell:nth-child(1){
+    flex: 0 0 5%;
+}
+
+.mat-cell:nth-child(2),
+.mat-header-cell:nth-child(2){
+    flex: 0 0 40%;
+}
+
+.mat-cell:nth-child(3),
+.mat-header-cell:nth-child(3){
+    flex: 0 0 20%;
+}
+
+.mat-cell:nth-child(4),
+.mat-header-cell:nth-child(4){
+    flex: 0 0 15%;
+}
+
+.title-center {
+    margin: 0 auto;
+}
+
